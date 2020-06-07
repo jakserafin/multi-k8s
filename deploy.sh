@@ -9,5 +9,5 @@ docker push lbrf/multi-server:$SHA
 docker push lbrf/multi-worker:$SHA
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=lbrf/multi-server:$SHA
-kubectl set image deployments/client-deployment server=lbrf/multi-client:$SHA
-kubectl set image deployments/worker-deployment server=lbrf/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=lbrf/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=lbrf/multi-worker:$SHA
